@@ -8,7 +8,6 @@ print(len(lista_tabelas))
 
 tabela = lista_tabelas
 
-tabelas = sorted(glob("./*.csv"))
 
 i=0
 j=0
@@ -17,7 +16,7 @@ for table in lista_tabelas:
     tabela = table.to_csv('tabela_'+str(i)+'_Anexo1.csv', index=False)
     print('Tabela '+str(i)+' convertida para .csv')
 
-
+tabelas = sorted(glob("./*.csv"))
 
 print("Compactando arquivos csv em Zipfile...")
 with ZipFile("tabelas_Anexo1_compactadas.zip", "w") as zip:
